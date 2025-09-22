@@ -9,7 +9,7 @@
 ## Manual Testing Instructions
 
 ```bash
-ddev add-on get https://github.com/tyler36/ddev-cypress/tarball/<branch>
+ddev add-on get https://github.com/ddev/ddev-cypress/tarball/<branch>
 ddev restart
 ```
 

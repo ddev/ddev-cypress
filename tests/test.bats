@@ -37,8 +37,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev add-on get tyler36/ddev-cypress with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev add-on get tyler36/ddev-cypress
+  echo "# ddev add-on get ddev/ddev-cypress with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev add-on get ddev/ddev-cypress
   ddev restart >/dev/null
   health_checks
 }

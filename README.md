@@ -1,7 +1,7 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
-[![tests](https://github.com/tyler36/ddev-cypress/actions/workflows/tests.yml/badge.svg)](https://github.com/tyler36/ddev-cypress/actions/workflows/tests.yml)
-[![last commit](https://img.shields.io/github/last-commit/tyler36/ddev-cypress)](https://github.com/tyler36/ddev-cypress/commits)
-[![release](https://img.shields.io/github/v/release/ddev/ddev-cypress)](https://github.com/tyler36/ddev-cypress/releases/latest)
+[![tests](https://github.com/ddev/ddev-cypress/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-cypress/actions/workflows/tests.yml)
+[![last commit](https://img.shields.io/github/last-commit/ddev/ddev-cypress)](https://github.com/ddev/ddev-cypress/commits)
+[![release](https://img.shields.io/github/v/release/ddev/ddev-cypress)](https://github.com/ddev/ddev-cypress/releases/latest)
 
 # DDEV-cypress <!-- omit in toc -->
 
@@ -55,7 +55,7 @@ Installing Cypress with favorite package manager works great locally. However, m
 - Install service
 
   ```shell
-  ddev add-on get tyler36/ddev-cypress
+  ddev add-on get ddev/ddev-cypress
   ```
 
   Then restart the project
@@ -65,7 +65,7 @@ Installing Cypress with favorite package manager works great locally. However, m
   ```
 
 > [!NOTE]
-> If you change `additional_hostnames` or `additional_fqdns`, you have to re-run `ddev add-on get tyler36/ddev-cypress`
+> If you change `additional_hostnames` or `additional_fqdns`, you have to re-run `ddev add-on get ddev/ddev-cypress`
 
 - Run cypress via `ddev cypress-open` or `ddev cypress-run` (headless).
 
