@@ -33,11 +33,11 @@ The main benefit is integration of Chrome and Firefox browsers out of the box, p
 This addon:
 
 - provides Cypress without the need to install <a href="https://nodejs.org">Node.js</a>
-- provides Firefox and Chromium out of the box, preconfigured for Cypress
+- provides Firefox and Chromium out of the box, pre-configured for Cypress
 - configures your project's HTTPS site a base URL
 - provides helper commands for running Cypress GUI or in headless mode
 
-Installing Cypress with favorite package manager works great locally. However, maintaining a consistent node and browser environments across teams, operating systrems, CI/CS development pipelines and cloud development spaces can become a challenge.
+Installing Cypress with favorite package manager works great locally. However, maintaining a consistent node and browser environments across teams, operating systems, CI/CS development pipelines and cloud development spaces can become a challenge.
 
 <a href="https://www.drupal.org/docs/develop/automated-testing/browser-testing-using-cypress">Browser testing using Cypress</a> sets up Cypress for Drupal manually. For Linux users this could be easier, since X11 and Firefox are usually already present.
 
