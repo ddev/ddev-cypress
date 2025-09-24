@@ -1,7 +1,7 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
-[![tests](https://github.com/tyler36/ddev-cypress/actions/workflows/tests.yml/badge.svg)](https://github.com/tyler36/ddev-cypress/actions/workflows/tests.yml)
-[![last commit](https://img.shields.io/github/last-commit/tyler36/ddev-cypress)](https://github.com/tyler36/ddev-cypress/commits)
-[![release](https://img.shields.io/github/v/release/ddev/ddev-cypress)](https://github.com/tyler36/ddev-cypress/releases/latest)
+[![tests](https://github.com/ddev/ddev-cypress/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-cypress/actions/workflows/tests.yml)
+[![last commit](https://img.shields.io/github/last-commit/ddev/ddev-cypress)](https://github.com/ddev/ddev-cypress/commits)
+[![release](https://img.shields.io/github/v/release/ddev/ddev-cypress)](https://github.com/ddev/ddev-cypress/releases/latest)
 
 # DDEV-cypress <!-- omit in toc -->
 
@@ -33,11 +33,11 @@ The main benefit is integration of Chrome and Firefox browsers out of the box, p
 This addon:
 
 - provides Cypress without the need to install <a href="https://nodejs.org">Node.js</a>
-- provides Firefox and Chromium out of the box, preconfigured for Cypress
+- provides Firefox and Chromium out of the box, pre-configured for Cypress
 - configures your project's HTTPS site a base URL
 - provides helper commands for running Cypress GUI or in headless mode
 
-Installing Cypress with favorite package manager works great locally. However, maintaining a consistent node and browser environments across teams, operating systrems, CI/CS development pipelines and cloud development spaces can become a challenge.
+Installing Cypress with favorite package manager works great locally. However, maintaining a consistent node and browser environments across teams, operating systems, CI/CS development pipelines and cloud development spaces can become a challenge.
 
 <a href="https://www.drupal.org/docs/develop/automated-testing/browser-testing-using-cypress">Browser testing using Cypress</a> sets up Cypress for Drupal manually. For Linux users this could be easier, since X11 and Firefox are usually already present.
 
@@ -55,7 +55,7 @@ Installing Cypress with favorite package manager works great locally. However, m
 - Install service
 
   ```shell
-  ddev add-on get tyler36/ddev-cypress
+  ddev add-on get ddev/ddev-cypress
   ```
 
   Then restart the project
@@ -65,7 +65,7 @@ Installing Cypress with favorite package manager works great locally. However, m
   ```
 
 > [!NOTE]
-> If you change `additional_hostnames` or `additional_fqdns`, you have to re-run `ddev add-on get tyler36/ddev-cypress`
+> If you change `additional_hostnames` or `additional_fqdns`, you have to re-run `ddev add-on get ddev/ddev-cypress`
 
 - Run cypress via `ddev cypress-open` or `ddev cypress-run` (headless).
 
