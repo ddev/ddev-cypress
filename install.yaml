@@ -1,7 +1,6 @@
 name: ddev-cypress
 
-# Available with DDEV v1.23.3+, and works only for DDEV v1.23.3+ binaries
-ddev_version_constraint: '>= v1.24.3'
+ddev_version_constraint: '>= v1.24.10'
 
 # pre_install_actions - list of actions to run before installing the addon.
 # Examples would be removing an extraneous docker volume,
@@ -25,19 +24,6 @@ post_install_actions:
       echo "Existing docker-compose.cypress_extras.yaml does not have #ddev-generated, so can't be updated"
       exit 2
     fi
-  - |
-    #ddev-nodisplay
-    #ddev-description:Adding all hostnames to the cypress container to make them available
-    cat <<-END >docker-compose.cypress_extras.yaml
-    #ddev-generated
-    services:
-      cypress:
-        external_links:
-        {{- $cypress_hostnames := splitList "," (env "DDEV_HOSTNAME") -}}
-        {{- range $i, $n := $cypress_hostnames }}
-          - "ddev-router:{{- replace (env "DDEV_TLD") "\\${DDEV_TLD}" (replace (env "DDEV_PROJECT") "\\${DDEV_PROJECT}" $n) -}}"
-        {{- end }}
-    END
 
 removal_actions:
   - |
