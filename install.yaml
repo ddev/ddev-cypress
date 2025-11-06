@@ -16,6 +16,18 @@ project_files:
 # List of files and directories that are copied into the global .ddev directory
 global_files:
 
+pre_install_actions:
+  - |
+    #ddev-nodisplay
+    #ddev-description:Remove docker-compose.cypress_extras.yaml file
+    if [ -f docker-compose.cypress_extras.yaml ]; then
+      if grep -q '#ddev-generated' docker-compose.cypress_extras.yaml; then
+        rm -f docker-compose.cypress_extras.yaml
+      else
+        echo "Unwilling to remove '$DDEV_APPROOT/.ddev/docker-compose.cypress_extras.yaml' because it does not have #ddev-generated in it; you can manually delete it if it is safe to delete."
+      fi
+    fi
+
 post_install_actions:
   - |
     #ddev-nodisplay
