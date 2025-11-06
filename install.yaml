@@ -2,20 +2,6 @@ name: ddev-cypress
 
 ddev_version_constraint: '>= v1.24.10'
 
-# pre_install_actions - list of actions to run before installing the addon.
-# Examples would be removing an extraneous docker volume,
-# or doing a sanity check for requirements.
-pre_install_actions:
-
-# list of files and directories listed that are copied into project .ddev directory
-project_files:
-  - docker-compose.cypress.yaml
-  - commands/cypress/cypress-open
-  - commands/cypress/cypress-run
-
-# List of files and directories that are copied into the global .ddev directory
-global_files:
-
 pre_install_actions:
   - |
     #ddev-nodisplay
@@ -27,3 +13,12 @@ pre_install_actions:
         echo "Unwilling to remove '$DDEV_APPROOT/.ddev/docker-compose.cypress_extras.yaml' because it does not have #ddev-generated in it; you can manually delete it if it is safe to delete."
       fi
     fi
+
+# list of files and directories listed that are copied into project .ddev directory
+project_files:
+  - docker-compose.cypress.yaml
+  - commands/cypress/cypress-open
+  - commands/cypress/cypress-run
+
+# List of files and directories that are copied into the global .ddev directory
+global_files:
