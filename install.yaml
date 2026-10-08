@@ -4,7 +4,6 @@ ddev_version_constraint: '>= v1.24.10'
 
 pre_install_actions:
   - |
-    #ddev-nodisplay
     #ddev-description:Remove docker-compose.cypress_extras.yaml file
     if [ -f docker-compose.cypress_extras.yaml ]; then
       if grep -q '#ddev-generated' docker-compose.cypress_extras.yaml; then
